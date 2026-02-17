@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Harjoitus</title>
+    <link rel="stylesheet" href="/Login.css">
+</head>
+<body>
+<h1 id="ChatOtsikko">CHAT</h1>
+    <p id="otsikko">Kirjaudu sisään</p>
+    <br>
+
+    <form method="POST" action="/login">
+        <input type="password" id="Salis" name="salasana" placeholder="Salasana" required>
+        <button id="nappi1" type="submit">Kirjaudu</button>
+    </form>
+
+    <p id="virhe"></p>
+
+    <script>
+        // Tarkistetaan URL: ?error=1
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("error")) {
+            const virhe = document.getElementById("virhe");
+            virhe.textContent = "Väärä salasana";
+            virhe.style.color = "red";
+            virhe.style.fontSize = "30px"
+        }
+    </script>
+
+</body>
+</html>

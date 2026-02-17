@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/welcome.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="otsikko1">Tervetuloa!</h1>
+    <p id="onnistui">Olet kirjautunut onnistuneesti sivulle.</p>
+
+
+    <!-- CHAT -->
+    <div id="chat">
+        <ul id="messages"></ul>
+        <form id="chatForm">
+            <input id="input" autocomplete="off" placeholder="Kirjoita viesti">
+            <button type="submit">Lähetä</button>
+            
+        </form>
+    </div>
+
+    
+    <script>
+    window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            window.location.reload();
+        }
+    });
+    </script>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        const form = document.getElementById("chatForm");
+        const input = document.getElementById("input");
+        const messages = document.getElementById("messages");
+
+        // Lähetä viesti serverille
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            if (input.value) {
+                socket.emit("chat message", input.value);
+                input.value = "";
+            }
+        });
+
+        // Näytä uusi viesti
+        socket.on("chat message", msg => {
+            const item = document.createElement("li");
+            item.textContent = msg;
+            messages.appendChild(item);
+            messages.scrollTop = messages.scrollHeight; // scrollaa automaattisesti alas
+        });
+
+        // Näytä aiemmat viestit uudelle käyttäjälle
+        socket.on("chat history", msgs => {
+            msgs.forEach(msg => {
+                const item = document.createElement("li");
+                item.textContent = msg;
+                messages.appendChild(item);
+            });
+            messages.scrollTop = messages.scrollHeight;
+        });
+    </script>
+<br> <br>
+<button onclick="location.href='/logout'" id="logOut">Kirjaudu ulos</button>
+</body>
+</html>

@@ -1,0 +1,96 @@
+body {
+    background-color: #1e1e1e; /* tumma tausta */
+    color: #f0f0f0; /* oletusteksti vaaleaksi */
+    font-family: Arial, sans-serif;
+}
+
+#otsikko1 {
+    font-size: 66px;
+    color: #ffffff; /* otsikko kirkkaaksi */
+}
+
+#onnistui {
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #4da6ff; /* sininen sävy tummalle taustalle */
+}
+
+#logOut {
+    box-shadow: 3px 4px 0px 0px #5a1a14; /* tummempi varjo */
+    background: linear-gradient(to bottom, #a62a1f 5%, #d0332c 100%);
+    background-color: #a62a1f;
+    border-radius: 18px;
+    border: 1px solid #8a1f15;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 17px;
+    padding: 7px 25px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #600b05; /* tumma varjo */
+}
+
+#logOut:hover {
+    background: linear-gradient(to bottom, #d0332c 5%, #a62a1f 100%);
+    background-color: #d0332c;
+}
+
+#logOut:active {
+    position: relative;
+    top: 1px;
+}
+
+#chat {
+    border: 1px solid #444444; /* tummempi reunus */
+    padding: 10px;
+    width: 90%;
+    max-width: 500px;
+    height: 300px;
+    overflow-y: auto;
+    margin-top: 20px;
+    background-color: #2a2a2a; /* tumma chat-tausta */
+    border-radius: 6px;
+}
+
+#messages {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#messages li {
+    margin-bottom: 5px;
+    padding: 5px;
+    background: #3a3a3a; /* tumma viestilaatikko */
+    color: #f0f0f0;
+    border-radius: 4px;
+}
+
+#chatForm {
+    margin-top: 10px;
+    display: flex;
+    gap: 5px;
+}
+
+#input {
+    flex: 1;
+    padding: 5px;
+    background-color: #2b2b2b; /* tumma syöttökenttä */
+    color: #f0f0f0;
+    border: 1px solid #555555;
+    border-radius: 4px;
+}
+
+#chat button {
+    padding: 5px 10px;
+    background-color: #444444; /* tumma nappi */
+    color: #f0f0f0;
+    border: 1px solid #666666;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#chat button:hover {
+    background-color: #555555;
+}

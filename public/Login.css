@@ -1,0 +1,55 @@
+body {
+    background-color: #1e1e1e; /* tumma tausta */
+    display: flex;
+    flex-direction: column; /* Elementit pystysuoraan */
+    align-items: center;    /* Vaakasuuntainen keskitys */
+    padding-top: 50px;      /* vähän tilaa ylhäältä */
+    color: #f0f0f0;         /* oletustekstin väri vaaleaksi */
+}
+
+#otsikko {
+    font-size: 46px;
+    font-family: serif;
+    color: #f0f0f0; /* otsikko vaaleaksi */
+}
+
+#nappi1 {
+    box-shadow: inset 0px 39px 0px -24px #a73e36; /* tummempi varjostus */
+    background-color: #b03c2f; /* tumma punainen */
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff; /* teksti valkoinen */
+    font-family: Arial;
+    font-size: 15px;
+    padding: 6px 15px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #7a1f17; /* tumma tekstivarjo */
+    height: 45px;
+}
+
+#nappi1:hover {
+    background-color: #c04b3d; /* hiukan kirkkaampi hover */
+}
+
+#nappi1:active {
+    position: relative;
+    top: 1px;
+}
+
+#Salis {
+    width: 250px;
+    height: 28px;
+    font-size: 18px;
+    padding: 5px;
+    background-color: #333333; /* tumma kenttä */
+    color: #f0f0f0;            /* vaalea teksti */
+    border: 1px solid #555555; /* tumma reunus */
+    border-radius: 4px;
+}
+
+#ChatOtsikko {
+    font-size: 80px;
+    color: #ffffff; /* kirkas otsikko */
+}
