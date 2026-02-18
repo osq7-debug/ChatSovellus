@@ -5,39 +5,28 @@ body {
     align-items: center;    /* Vaakasuuntainen keskitys */
     padding-top: 50px;      /* vähän tilaa ylhäältä */
     color: #f0f0f0;         /* oletustekstin väri vaaleaksi */
+    min-height: 100vh;
+    margin: 0;
 }
 
+/* Otsikko */
 #otsikko {
     font-size: 46px;
     font-family: serif;
     color: #f0f0f0; /* otsikko vaaleaksi */
+    text-align: center;
+    margin-bottom: 30px; /* väli alas */
 }
 
-#nappi1 {
-    box-shadow: inset 0px 39px 0px -24px #a73e36; /* tummempi varjostus */
-    background-color: #b03c2f; /* tumma punainen */
-    border-radius: 4px;
-    border: 1px solid #ffffff;
-    display: inline-block;
-    cursor: pointer;
-    color: #ffffff; /* teksti valkoinen */
-    font-family: Arial;
-    font-size: 15px;
-    padding: 6px 15px;
-    text-decoration: none;
-    text-shadow: 0px 1px 0px #7a1f17; /* tumma tekstivarjo */
-    height: 45px;
+/* Chat-otsikko / iso otsikko */
+#ChatOtsikko {
+    font-size: 80px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-#nappi1:hover {
-    background-color: #c04b3d; /* hiukan kirkkaampi hover */
-}
-
-#nappi1:active {
-    position: relative;
-    top: 1px;
-}
-
+/* Tekstikenttä */
 #Salis {
     width: 250px;
     height: 28px;
@@ -47,9 +36,61 @@ body {
     color: #f0f0f0;            /* vaalea teksti */
     border: 1px solid #555555; /* tumma reunus */
     border-radius: 4px;
+    margin-bottom: 20px;       /* väli alapuolelle */
 }
 
-#ChatOtsikko {
-    font-size: 80px;
-    color: #ffffff; /* kirkas otsikko */
+/* Nappi */
+#nappi1 {
+    box-shadow: 0px 0px 0px 2px #9fb4f2;
+    background: linear-gradient(to bottom, #0041b0 5%, #000000 100%);
+    border-radius: 10px;
+    border: 1px solid #4e6096;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 19px;
+    padding: 12px 37px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #283966;
+    margin-bottom: 30px; /* väli alapuolelle */
+}
+
+#nappi1:hover {
+    background: linear-gradient(to bottom, #000000 5%, #0041b0 100%);
+    background-color: #000000;
+}
+
+#nappi1:active {
+    position: relative;
+    top: 1px;
+}
+
+/* --- MOBIILI --- */
+@media (max-width: 600px) {
+    #otsikko {
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+
+    #ChatOtsikko {
+        font-size: 50px;
+        margin-bottom: 30px;
+    }
+
+    #Salis {
+        width: 90%;      /* sopiva leveys puhelimelle */
+        font-size: 20px; /* isompi teksti */
+        height: 36px;
+        padding: 8px;
+        margin-bottom: 25px;
+    }
+
+    #nappi1 {
+        font-size: 22px;       /* isompi teksti */
+        padding: 16px 50px;    /* isompi nappi */
+        display: block;
+        text-align: center;
+        margin: 0 auto 30px auto; /* keskitys vaakaan ja väli alapuolelle */
+    }
 }

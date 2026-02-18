@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 
-const salasana = 'Osku123'; //Salasana
+const salasana = 'Salaisuus'; //Salasana
 const saltRounds = 10;
 
 bcrypt.hash(salasana, saltRounds, (err, hash) => {

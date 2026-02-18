@@ -98,6 +98,8 @@ io.on("connection", socket => {
         messages.push(msg); 
         io.emit("chat message", msg); 
     });
+
+
 });
 
 

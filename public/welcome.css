@@ -1,39 +1,58 @@
+/* --- BODY & YLEISET --- */
 body {
-    background-color: #1e1e1e; /* tumma tausta */
-    color: #f0f0f0; /* oletusteksti vaaleaksi */
-    font-family: Arial, sans-serif;
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* ei keskitetä pystysuunnassa */
+    min-height: 100vh; /* koko ruutu */
+    margin: 0;
+    padding: 20px 0;
 }
 
+
+
+/* --- OTSIKKO --- */
 #otsikko1 {
     font-size: 66px;
-    color: #ffffff; /* otsikko kirkkaaksi */
+    color: #4da6ff; /* kirkas sininen */
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow:
+        0 0 2px #4da6ff,
+        0 0 5px #4da6ff; /* kevyt hohde, ei liikaa */
 }
+
+
 
 #onnistui {
     font-size: 25px;
     font-family: 'Times New Roman', Times, serif;
-    color: #4da6ff; /* sininen sävy tummalle taustalle */
+    color: #4da6ff;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
+/* --- LOGOUT-NAPPI --- */
 #logOut {
-    box-shadow: 3px 4px 0px 0px #5a1a14; /* tummempi varjo */
+    box-shadow: 3px 4px 0px 0px #5a1a14;
     background: linear-gradient(to bottom, #a62a1f 5%, #d0332c 100%);
-    background-color: #a62a1f;
     border-radius: 18px;
     border: 1px solid #8a1f15;
-    display: inline-block;
     cursor: pointer;
     color: #ffffff;
     font-family: Arial;
     font-size: 17px;
     padding: 7px 25px;
     text-decoration: none;
-    text-shadow: 0px 1px 0px #600b05; /* tumma varjo */
+    text-shadow: 0px 1px 0px #600b05;
+    transition: all 0.2s ease;
 }
 
 #logOut:hover {
     background: linear-gradient(to bottom, #d0332c 5%, #a62a1f 100%);
-    background-color: #d0332c;
 }
 
 #logOut:active {
@@ -41,56 +60,105 @@ body {
     top: 1px;
 }
 
+/* --- CHAT-KONTAINERI --- */
 #chat {
-    border: 1px solid #444444; /* tummempi reunus */
-    padding: 10px;
+    border: 1px solid #444444;
+    background-color: #2a2a2a;
+    border-radius: 6px;
     width: 90%;
     max-width: 500px;
-    height: 300px;
-    overflow-y: auto;
-    margin-top: 20px;
-    background-color: #2a2a2a; /* tumma chat-tausta */
-    border-radius: 6px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
 }
 
+/* --- VIESTILISTA --- */
 #messages {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    flex: 1; /* vie tilan */
+    overflow-y: auto;
 }
 
 #messages li {
     margin-bottom: 5px;
-    padding: 5px;
-    background: #3a3a3a; /* tumma viestilaatikko */
+    padding: 8px;
+    background: #3a3a3a;
     color: #f0f0f0;
-    border-radius: 4px;
+    border-radius: 6px;
+    word-wrap: break-word;
 }
 
+/* --- CHAT-FORM --- */
 #chatForm {
-    margin-top: 10px;
     display: flex;
     gap: 5px;
 }
 
 #input {
     flex: 1;
-    padding: 5px;
-    background-color: #2b2b2b; /* tumma syöttökenttä */
+    padding: 8px;
+    background-color: #2b2b2b;
     color: #f0f0f0;
     border: 1px solid #555555;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 #chat button {
-    padding: 5px 10px;
-    background-color: #444444; /* tumma nappi */
+    padding: 8px 15px;
+    background-color: #444444;
     color: #f0f0f0;
     border: 1px solid #666666;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 #chat button:hover {
     background-color: #555555;
+}
+
+/* --- RESPONSIIVISUUS --- */
+@media (max-width: 600px) {
+
+    #otsikko1 {
+        font-size: 36px;
+    }
+
+    #onnistui {
+        font-size: 18px;
+    }
+
+    #chat {
+        width: 95%;
+        height: 60vh;
+        max-width: none;
+    }
+
+    #input {
+        font-size: 16px;
+    }
+
+    #chat button {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    #logOut {
+        font-size: 15px;
+        padding: 6px 18px;
+    }
+}
+
+/* --- SCROLLBAR TYYLI --- */
+#messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+#messages::-webkit-scrollbar-thumb {
+    background-color: #4F46E5;
+    border-radius: 3px;
 }
