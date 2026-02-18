@@ -23,14 +23,19 @@ that works simultaneously for multiple users.
 ## Notes
 This project was built as a learning project to understand
 full-stack web development, authentication, sessions, and deployment.
+## AI Usage
 
-# Full-Stack Login & Chat Application
+Artificial intelligence was used as a learning and support tool during the development
+of this project. AI was utilized to help explain concepts, debug issues, and validate
+implementation approaches.
+
+# Full-Stack Login & Chat Sovellus
 
 Tämä on full-stack-websovellus, joka on rakennettu Node.js:llä ja Expressillä.
 Sovellus sisältää salasanalla suojatun kirjautumisjärjestelmän sekä
 reaaliaikaisen chatin, joka toimii samanaikaisesti useille käyttäjille.
 
-## Features
+## Ominaisuudet
 - Sessioihin perustuva tunnistautuminen (express-session)
 - Turvallinen salasanojen käsittely bcryptillä
 - Suojatut reitit (kirjautuminen vaaditaan)
@@ -39,7 +44,7 @@ reaaliaikaisen chatin, joka toimii samanaikaisesti useille käyttäjille.
 - Ympäristömuuttujat salaisuuksien hallintaan (.env)
 - Julkaistu pilvipalveluun (Render)
 
-## Tech Stack
+## Teknologiat
 - Backend: Node.js, Express
 - Frontend: HTML, CSS, vanilla JavaScript
 - Reaaliaikainen viestintä: Socket.IO
@@ -49,3 +54,8 @@ reaaliaikaisen chatin, joka toimii samanaikaisesti useille käyttäjille.
 ## Notes
 Tämä projekti on toteutettu oppimisprojektina full-stack-kehityksen,
 tunnistautumisen, sessioiden ja sovelluksen julkaisemisen ymmärtämiseksi.
+
+## Tekoälyn käyttö
+Tekoälyä käytettiin tässä projektissa oppimisen ja tukena kehitystyön aikana.
+Sitä hyödynnettiin käsitteiden selittämiseen, virheiden selvittämiseen sekä
+ratkaisujen ja toteutustapojen varmistamiseen.
